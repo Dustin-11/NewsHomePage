@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import Main from './Components/Main'
-import Header from './Components/Header'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { MainContent } from './Components/MainContent'
+import { Header } from './Components/Header'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
     return (
         <>
             <Header />
-            <Main />
+            <MainContent />
             {/*<button onClick={() => setCount((count) => count + 1)}>*/}
             {/*  count is {count}*/}
             {/*</button>*/}
@@ -20,4 +17,4 @@ function App() {
     );
 }
 
-export default App
+export { App }

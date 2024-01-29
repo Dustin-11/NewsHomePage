@@ -1,24 +1,94 @@
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.header{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 20px 20px 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+    border: 1px solid red;
 }
+.hamburger-wrapper {
+    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hamburger-label{
+    border: 1px solid black;
+
+}
+.hamburger-icon{
+    border: 1px solid yellow;
+}
+main {
+    margin: 40px 0 0 0;
+    padding: 0 20px 0 20px;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.mainImg_wrapper {
+    width: 100vw;
+    margin: 50px 0 0 0;
+}
+.mainImg {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.mainContent_Heading {
+    color: black;
+}
+.mainContent_Text {
+    color: #797984;
+}
+ .mainContent_Button {
+    color: white;
+    background: #F7694B;
+}
+aside {
+    margin: 0 20px 0 20px;
+    width: 100%;
+    /*max-width: 100%;*/
+    background: #040423;
+}
+.asideHeading {
+    color: #F0B847;
+    font-size: 2rem;
+    margin: 0 1rem 0 1rem;
+}
+.asideArticle {
+    margin: 0 1rem 0 1rem;
+}
+.articleHeading{
+    color: white;
+}
+.articleText {
+    color: #797984;
+}
+.styleLine {
+    border: 1px solid #797984
+}
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.test{
-    animation: logo-spin 3s linear infinite
+.hamburger-checkbox
+{
+    display: none;
 }
 
 @keyframes logo-spin {
@@ -30,16 +100,3 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
