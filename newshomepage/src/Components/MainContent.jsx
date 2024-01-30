@@ -7,39 +7,42 @@ import gamingGrowth from '../assets/images/image-gaming-growth.jpg'
 const MainContent = () => {
     return (
         <>
-            <main>
-                <div className="mainImg-wrapper">
-                    <img className="mainImg" src={web3Mobile} />
-                </div>
-                <h1 className="mainContent_Heading">The Bright Future of Web 3.0?</h1>
-                <div className="mainTextButton_Wrapper">
-                    <p className="mainContent_Text">
-                        We dive into the next evolution of the web that claims to put the power of the
-                    platforms back into the hands of the people. But is it really fulfilling its promise?
-                    </p>
-                    <button className="mainContent_Button">READ MORE</button>
-                </div>
-            </main>
-            <aside className="aside">
-                <h1 className="asideHeading">New</h1>
-                <article className="asideArticle">
-                    <h3 className="articleHeading">Hydrogen VS Electric Cars</h3>
-                    <p className="articleText">Will hydrogen-fueled cars ever catch up to EVs?</p>
-                    <hr className="styleLine" />
-                </article>
-                <article className="asideArticle">
-                    <h3 className="articleHeading">The Downsides of AI Artistry</h3>
-                    <p className="articleText">What are the possible adverse effects of on-demand AI image generation?</p>
-                    <hr className="styleLine" />
-                </article>
-                <article className="asideArticle">
-                    <h3 className="articleHeading">Is VC Funding Drying Up?</h3>
-                    <p className="articleText">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-                    <hr className="styleLine" />
-                </article>
-            </aside>
+            <div className="main-Aside_Container">
+                <main>
+                    <div className="mainImg-wrapper">
+                        <img className="mainImg" src={web3Mobile} />
+                    </div>
+                    <div className="mainContent_Container">
+                        <h1 className="mainContent_Heading">The Bright Future of Web 3.0?</h1>
+                        <div className="mainTextButton_Wrapper">
+                            <p className="mainContent_Text">
+                                We dive into the next evolution of the web that claims to put the power of the
+                            platforms back into the hands of the people. But is it really fulfilling its promise?
+                            </p>
+                            <button className="mainContent_Button">READ MORE</button>
+                        </div>
+                    </div>
+                </main>
+                <aside className="aside">
+                    <h1 className="asideHeading">New</h1>
+                    <article className="asideArticle">
+                        <h3 className="articleHeading">Hydrogen VS Electric Cars</h3>
+                        <p className="articleText">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                        <hr className="styleLine" />
+                    </article>
+                    <article className="asideArticle">
+                        <h3 className="articleHeading">The Downsides of AI Artistry</h3>
+                        <p className="articleText">What are the possible adverse effects of on-demand AI image generation?</p>
+                        <hr className="styleLine" />
+                    </article>
+                    <article className="asideArticle">
+                        <h3 className="articleHeading">Is VC Funding Drying Up?</h3>
+                        <p className="articleText">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+                    </article>
+                </aside>
+            </div>
             <div className="newsArticle_Container">
-                <article>
+                <article className="newsArticle" id="firstNewsArticle">
                     <div className="newsImage_Container">
                         <img className="newsImage" src={retroComputer} />
                     </div>
@@ -49,7 +52,7 @@ const MainContent = () => {
                         <p className="newsText">What happens when old PCs are given modern upgrade?</p>
                     </div>
                 </article>
-                <article>
+                <article className="newsArticle" id="secondNewsArticle">
                     <div className="newsImage_Container">
                         <img className="newsImage" src={laptopKeys} />
                     </div>
@@ -59,7 +62,7 @@ const MainContent = () => {
                         <p className="newsText">Our best picks for various needs and budgets.</p>
                     </div>
                 </article>
-                <article>
+                <article className="newsArticle" id="thirdNewsArticle">
                     <div className="newsImage_Container">
                         <img className="newsImage" src={gamingGrowth} />
                     </div>

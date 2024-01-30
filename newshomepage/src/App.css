@@ -2,6 +2,8 @@
   /*max-width: 1280px;*/
   margin: 0 auto;
   text-align: left;
+  max-width: 100vw;
+  position: relative;
 }
 
 .header{
@@ -12,19 +14,67 @@
     padding: 20px 20px 0 20px;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
     max-width: 100%;
     border: 1px solid red;
+}
+.nav {
+    display: none;
+}
+.nav.active {
+    display: block;
+    position: fixed;
+    top: 4.5rem;
+    right: 1rem;
+    height: 100vh;
+    background-color: white;
+    width: 70vw;
+    padding: 0 2rem;
+    z-index: 55;
+    /*right: 0;
+    top: 0;*/
+}
+.toggleMenu {
+    border: 1px solid orange;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+
+}
+.toggleMenu.active {
+}
+.shadowEffect {
+    display: none;
+}
+.shadowEffect.active {
+    display: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+}
+.menu a {
+    text-decoration: none
 }
 .hamburger-wrapper {
     border: 1px solid red;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    /*position: absolute;*/
+    /*right: 0;*/
 }
 .hamburger-label{
     border: 1px solid black;
+    z-index: 50;
 
 }
 .hamburger-icon{
@@ -32,19 +82,18 @@
 }
 main {
     margin: 40px 0 0 0;
-    padding: 0 20px 0 20px;
-    width: 100vw;
+    padding: 0 20px;
     max-width: 100%;
 }
 
 .mainImg_wrapper {
     width: 100vw;
     margin: 50px 0 0 0;
+    position: relative;
 }
 .mainImg {
-    position: relative;
+    /*position: relative;*/
     width: 100%;
-    height: auto;
 }
 .mainContent_Heading {
     color: black;
@@ -57,18 +106,15 @@ main {
     background: #F7694B;
 }
 aside {
-    margin: 0 20px 0 20px;
-    width: 100%;
-    /*max-width: 100%;*/
-    background: #040423;
+    padding: 0 1.5rem 0 1.5rem;
+    margin: 0 20px;
+    max-width: 100%;
+    background-color: #040423;
 }
 .asideHeading {
     color: #F0B847;
     font-size: 2rem;
-    margin: 0 1rem 0 1rem;
-}
-.asideArticle {
-    margin: 0 1rem 0 1rem;
+    padding: 0 0 0 0;
 }
 .articleHeading{
     color: white;
@@ -79,6 +125,51 @@ aside {
 .styleLine {
     border: 1px solid #797984
 }
+.newsArticle_Container {
+    border: 1px solid green;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.newsArticle {
+    margin: 1rem 0;
+
+}
+.newsImage_Container {
+    display: none;
+    max-width: 200px;
+}
+.newsImage {
+    display: none;
+    position: relative;
+    height: auto;
+    width: 80%;
+
+    
+    /*height: auto;*/
+}
+.newsContent_Container{
+    width: 100%;
+    height: 50%;
+}
+.newsNumber, .newsText {
+    color: #797984;
+}
+.newsNumber {
+    font-size: 2rem;
+    margin: 0;
+}
+.newsHeader {
+    color: #040423;
+    font-size: 1.3rem;
+    margin: 0;
+}
+.newsText {
+    margin: 0;
+}
+
+
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -98,5 +189,102 @@ aside {
   to {
     transform: rotate(360deg);
   }
+}
+
+@media screen and (min-width: 400px) {
+
+    .newsArticle {
+        display: flex;
+        flex-wrap: nowrap;
+        
+    }
+    .newsImage_Container {
+        display: block;
+    }
+    .newsImage{
+        display: block;
+    }
+}
+@media screen and (min-width: 768px) {
+
+    .newsArticle {
+        max-width: 40%;
+        
+    }
+    #secondNewsArticle {
+        margin-left: 2rem;
+    }
+    .header {
+        margin: 2rem 5rem 0 5rem;
+    }
+
+    main {
+        margin: 2rem 5rem 0 5rem;
+    }
+
+    aside {
+        margin: 2rem 5rem 0 5rem;
+    }
+    .newsArticle_Container {
+        margin: 3rem 5rem;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .newsArticle_Container {
+        margin: 3rem 10rem;
+    }
+    .newsArticle {
+        max-width: 30%;
+        justify-content: space-between;
+    }
+    #thirdNewsArticle {
+        margin-left: 2rem;
+    }
+    .main-Aside_Container {
+        display: flex;
+    }
+    
+    .header {
+        margin: 2rem 10rem 0 10rem;
+    }
+    main {
+        margin: 2rem 2rem 0 10rem;
+        width: 80vw;
+    }
+    aside {
+        margin: 2rem 10rem 0 0;
+    }
+    .mainImg {
+        max-height: 35vh;
+        max-width: 60vw;
+    }
+    .mainContent_Heading {
+        margin: 1rem 2rem 0 0;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    .mainContent_Text {
+        margin: 1.5rem 0 2rem 0;
+        font-size: 1.2rem;
+    }
+    .asideHeading {
+        font-size: 2.2rem;
+    }
+    .articleHeading {
+        font-size: 1.5rem;
+    }
+    .articleText {
+        font-size: 1.2rem;
+    }
+    @media screen and (min-width: 1441px){
+        .mainContent_Heading {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        .mainContent_Container {
+            display: flex;
+        }
+    }
+
 }
 
