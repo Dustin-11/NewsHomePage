@@ -1,24 +1,28 @@
 #root {
-  /*max-width: 1280px;*/
   margin: 0 auto;
   text-align: left;
   max-width: 100vw;
   position: relative;
+  font-family: 'Inter-Regular', sans-serif;
 }
 
 .header{
     display: flex;
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 20px 20px 0 20px;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
-    border: 1px solid red;
+    width: 100%;
+    max-width: 100vh;
+    font-size: 1rem;
+    background: white;
+    z-index: 100;
 }
 .nav {
     display: none;
+    font-weight: 600;
 }
 .nav.active {
     display: block;
@@ -27,30 +31,31 @@
     right: 1rem;
     height: 100vh;
     background-color: white;
-    width: 70vw;
-    padding: 0 2rem;
+    width: 68vw;
+    padding: 3rem 2rem;
     z-index: 55;
-    /*right: 0;
-    top: 0;*/
+    margin-top: -0.5rem;
+    
 }
 .toggleMenu {
-    border: 1px solid orange;
     position: fixed;
     top: 1.5rem;
     right: 2rem;
 
 }
 .toggleMenu.active {
+    
 }
 .shadowEffect {
     display: none;
 }
 .shadowEffect.active {
-    display: fixed;
+    display: block;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 30vw;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 3;
 }
@@ -60,25 +65,29 @@
     padding: 0;
     z-index: 5;
 }
+.menu li {
+    margin-bottom: 2rem;
+}
 .menu a {
-    text-decoration: none
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
 }
 .hamburger-wrapper {
-    border: 1px solid red;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /*position: absolute;*/
-    /*right: 0;*/
 }
 .hamburger-label{
-    border: 1px solid black;
     z-index: 50;
 
 }
 .hamburger-icon{
-    border: 1px solid yellow;
+}
+.main-Aside_Container {
+    position: relative;
+    top: 2.2rem;
 }
 main {
     margin: 40px 0 0 0;
@@ -92,49 +101,56 @@ main {
     position: relative;
 }
 .mainImg {
-    /*position: relative;*/
     width: 100%;
 }
 .mainContent_Heading {
     color: black;
+    font-family: 'Inter-ExtraBold', sans-serif;
+    font-weight: 800;
 }
 .mainContent_Text {
     color: #797984;
+    font-size: 1.2rem;
 }
- .mainContent_Button {
+.mainContent_Button {
     color: white;
     background: #F7694B;
+    font-size: 1.2rem;
 }
 aside {
-    padding: 0 1.5rem 0 1.5rem;
+    padding: 0 1.5rem 1rem 1.5rem;
     margin: 0 20px;
     max-width: 100%;
     background-color: #040423;
 }
 .asideHeading {
     color: #F0B847;
-    font-size: 2rem;
-    padding: 0 0 0 0;
+    font-size: 2.2rem;
+    padding: 1rem 0 0 0;
+    font-family: 'Inter-Bold', sans-serif;
 }
-.articleHeading{
+.articleHeading {
     color: white;
+    font-family: 'Inter-Bold', sans-serif;
+    font-size: 1.5rem;
 }
 .articleText {
     color: #797984;
+    font-size: 1.2rem;
 }
 .styleLine {
     border: 1px solid #797984
 }
 .newsArticle_Container {
-    border: 1px solid green;
     padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    position: relative;
+    top: 2.2rem;
 }
 .newsArticle {
     margin: 1rem 0;
-
 }
 .newsImage_Container {
     display: none;
@@ -145,9 +161,6 @@ aside {
     position: relative;
     height: auto;
     width: 80%;
-
-    
-    /*height: auto;*/
 }
 .newsContent_Container{
     width: 100%;
@@ -157,13 +170,15 @@ aside {
     color: #797984;
 }
 .newsNumber {
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 0;
+    font-family: 'Inter-Bold', sans-serif;
 }
 .newsHeader {
     color: #040423;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0;
+    font-family: 'Inter-Bold', sans-serif;
 }
 .newsText {
     margin: 0;
@@ -207,6 +222,45 @@ aside {
 }
 @media screen and (min-width: 768px) {
 
+    .nav {
+        display: block;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu li {
+        margin-right: 2rem;
+        margin-top: 1rem;
+    }
+    .menu li:last-child {
+        margin-right: 0;
+    }
+    .menu a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #797984;
+        font-family: 'Inter-Regular', sans-serif;
+    }
+    .nav.active {
+        display: block;
+        position: static;
+        width: initial;
+        padding: initial;
+        margin-top: initial;
+        height: initial;
+    }
+
+    .toggleMenu {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .shadowEffect.active {
+        display: none;
+    }
+    .hamburger-wrapper {
+        display: none;
+    }
     .newsArticle {
         max-width: 40%;
         
@@ -216,8 +270,13 @@ aside {
     }
     .header {
         margin: 2rem 5rem 0 5rem;
+        position: relative;
+        max-width: 100%;
+        width: initial;
     }
-
+    .main-Aside_Container{
+        position: static;
+    }
     main {
         margin: 2rem 5rem 0 5rem;
     }
@@ -225,8 +284,12 @@ aside {
     aside {
         margin: 2rem 5rem 0 5rem;
     }
+    .asideHeading {
+        padding-top: 1rem;
+    }
     .newsArticle_Container {
         margin: 3rem 5rem;
+        position: static;
     }
 }
 @media screen and (min-width: 1025px) {
@@ -252,7 +315,10 @@ aside {
         width: 80vw;
     }
     aside {
-        margin: 2rem 10rem 0 0;
+        margin: 2rem 11.25rem 0 0;
+    }
+    .asideHeading {
+        padding: 0;
     }
     .mainImg {
         max-height: 35vh;
@@ -276,6 +342,31 @@ aside {
     .articleText {
         font-size: 1.2rem;
     }
+    @media screen and (min-width: 1200px) {
+        .mainContent_Heading {
+            margin: 1rem 2rem 0 0;
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .mainContent_Text {
+            margin: 1.5rem 0 2rem 0;
+            font-size: 1.5rem;
+        }
+        .mainContent_Button{
+            font-size: 1.5rem;
+        }
+        .asideHeading {
+            font-size: 2.2rem;
+        }
+        .articleHeading {
+            font-size: 1.9rem;
+        }
+        .articleText {
+            font-size: 1.6rem;
+        }
+        
+    }
     @media screen and (min-width: 1441px){
         .mainContent_Heading {
             font-size: 3rem;
@@ -284,6 +375,31 @@ aside {
         .mainContent_Container {
             display: flex;
         }
+    }
+    @media screen and (min-width: 1730px) {
+        .newsNumber {
+            font-size: 2rem;
+        }
+
+        .newsHeader {
+            font-size: 1.5rem;
+        }
+
+        .newsText {
+            font-size: 1.1rem;
+        }
+    }
+    @font-face {
+        font-family: 'Inter-ExtraBold';
+        src: url('../public/fonts/static/Inter-ExtraBold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Inter-Bold';
+        src: url('../public/fonts/static/Inter-Bold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Inter-Regular';
+        src: url('../public/fonts/static/Inter-Regular.ttf') format('truetype');
     }
 
 }
